@@ -4,7 +4,7 @@ let timeLabels = [];
 let chartInstance = null;
 
 // 🔴 CHANGE THIS ONCE
-const API_BASE_URL = "https://YOUR_RAILWAY_URL"; 
+const API_BASE_URL = "https://aqi-backend-production.up.railway.app/"; 
 // example: https://aqi-backend-production.up.railway.app
 
 async function getAQI() {
