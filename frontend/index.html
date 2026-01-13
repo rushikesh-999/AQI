@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AQI Monitoring System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🌍 Air Quality Index Tracker</h1>
+
+    <div class="search">
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <input type="text" id="compareCityInput" placeholder="Compare with (optional)" />
+  <button onclick="getAQI()">Check AQI</button>
+</div>
+
+
+        <div id="result" class="card hidden">
+            <h2 id="cityName"></h2>
+            <p><strong>AQI:</strong> <span id="aqiValue"></span></p>
+            <div id="categoryBadge" class="badge"></div>
+
+            <div id="alertBox" class="alert hidden"></div>
+
+
+            <p><strong>Risk Level:</strong> <span id="risk"></span></p>
+            <p><strong>Health Advice:</strong> <span id="advice"></span></p>
+
+            <h3>Pollutants (µg/m³)</h3>
+            <ul id="pollutants"></ul>
+            <canvas id="aqiChart" width="400" height="200"></canvas>\
+
+            <h3 style="margin-top: 30px;">Recent AQI Searches</h3>
+
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>AQI</th>
+                        <th>Category</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top:30px;">City Comparison</h3>
+
+<div id="comparison" class="comparison hidden">
+  <div class="compare-card" id="city1"></div>
+  <div class="compare-card" id="city2"></div>
+</div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
